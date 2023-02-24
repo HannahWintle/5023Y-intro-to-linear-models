@@ -3,7 +3,7 @@ library(tidyverse)
 library(here)
 library(kableExtra)
 library(broom.helpers) #click install
-
+library(janitor)
 #___________________________----
 #IMPORT DATA📁 ----
 darwin <- read_csv(here("darwin", "data", "darwin.csv"))

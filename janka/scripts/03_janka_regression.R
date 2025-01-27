@@ -5,7 +5,7 @@ library(performance)
 
 #___________________________----
 #IMPORT DATA📁 ----
-janka <- read_csv(here("janka", "data", "janka.csv"))
+janka <- read_csv(here::here("janka", "data", "janka.csv"))
 
 #___________________________----
 #CHECK DATA🔎----
@@ -33,9 +33,13 @@ summary(janka)
 #________________________----
 # PEARSONS R CORRELATION----
 
+janka %>% cor_test(dens, hardness)
+
 janka %>% 
   ggplot(aes(x=dens, y=hardness))+
   geom_point()
+
+
 
 #________________________----
 #REGRESSION IN R----
